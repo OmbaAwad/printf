@@ -141,6 +141,8 @@ int print_int(va_list types, char buffer[],
 
 	return (write_number(is_negative, i, buffer, flags, width, precision, size));
 }
+/* task 1 end */
+/* task 2 */
 /**
  * print_binary - prints binary
  * @types: va_list
@@ -186,4 +188,4 @@ int print_binary(va_list types, char buffer[],
 	}
 	return (count);
 }
-/* task 1 end */
+/* task 2 end */
