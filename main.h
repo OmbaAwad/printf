@@ -11,6 +11,7 @@
 
 
 #define UNUSED(x) (void)(x)
+<<<<<<< HEAD
 
 #define BUFF_SIZE 1024
 
@@ -18,6 +19,11 @@
 
 /* FLAGS */
 
+=======
+/* task 4 */
+#define BUFF_SIZE 1024
+/* task 4 ends */
+>>>>>>> 453edd043a70dae4a3e75cc4df811b9fded5c7d0
 #define F_MINUS 1
 
 #define F_PLUS 2
