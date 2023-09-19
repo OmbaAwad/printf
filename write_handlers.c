@@ -160,9 +160,10 @@ int flags, int width, int precision, int size)
 		padd = ' ';
 
 	while (precision > length)
+	{
 		buffer[--ind] = '0';
 		length++;
-
+	}
 	if ((flags & F_ZERO) && !(flags & F_MINUS))
 		padd = '0';
 
@@ -173,9 +174,10 @@ int flags, int width, int precision, int size)
 
 		buffer[i] = '\0';
 
-		if (flags & F_MINUS))
+		if (flags & F_MINUS)
+		{
 			return (write(1, &buffer[ind], length) + write(1, &buffer[0], i));
-
+		}
 		else 
 		{
 			return (write(1, &buffer[0], i) + write(1, &buffer[ind], length));
