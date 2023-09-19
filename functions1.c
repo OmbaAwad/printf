@@ -110,7 +110,7 @@ int flags, int width, int precision, int size)
 		flags, 'X', width, precision, size));
 }
 /**
- * print_hexa - print hexa number in lower and upper case 
+ * print_hexa - print hexa number in lower and upper case
  * @types: va_list
  * @map_to: char array
  * @buffer: char array

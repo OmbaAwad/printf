@@ -85,7 +85,7 @@ int flags, int width, int precision, int size)
  * Return: printed chars number
  */
 
-int print_percent(va_list types, char buffer[], 
+int print_percent(va_list types, char buffer[],
 int flags, int width, int precision, int size)
 {
 	UNUSED(types);
