@@ -106,17 +106,20 @@ int length, char padd, char extra_c)
 		for (i = 1; i < width - length + 1; i++)
 			buffer[i] = padd;
 		buffer[i] = '\0';
-		if (flags & F_MINUS && padd == ' ') {
+		if (flags & F_MINUS && padd == ' ')
+		{
 			if (extra_c)
 				buffer[--ind] = extra_c;
 			return (write(1, &buffer[ind], length) + write(1, &buffer[1], i - 1));
 		}
-		else if (!(flags & F_MINUS) && padd == ' ') {
+		else if (!(flags & F_MINUS) && padd == ' ')
+		{
 			if (extra_c)
 				buffer[--ind] = extra_c;
 			return (write(1, &buffer[1], i - 1) + write(1, &buffer[ind], length));
 		}
-		else if (!(flags & F_MINUS) && padd == '0') {
+		else if (!(flags & F_MINUS) && padd == '0')
+		{
 			if (extra_c)
 				buffer[--padd_start] = extra_c;
 			return (write(1, &buffer[padd_start], i - padd_start) +
@@ -151,16 +154,14 @@ int flags, int width, int precision, int size)
 	UNUSED(size);
 
 	if (precision == 0 && ind == BUFF_SIZE - 2 && buffer[ind] == '0')
-		return (0); 
+		return (0);
 
 	if (precision > 0 && precision < length)
 		padd = ' ';
 
 	while (precision > length)
-	{
 		buffer[--ind] = '0';
 		length++;
-	}
 
 	if ((flags & F_ZERO) && !(flags & F_MINUS))
 		padd = '0';
@@ -172,11 +173,11 @@ int flags, int width, int precision, int size)
 
 		buffer[i] = '\0';
 
-		if (flags & F_MINUS) 
-		{
+		if (flags & F_MINUS))
 			return (write(1, &buffer[ind], length) + write(1, &buffer[0], i));
-		}
-		else {
+
+		else 
+		{
 			return (write(1, &buffer[0], i) + write(1, &buffer[ind], length));
 		}
 	}
