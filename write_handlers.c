@@ -128,7 +128,6 @@ int length, char padd, char extra_c)
 	}
 	if (extra_c)
 		buffer[--ind] = extra_c;
-
 	return (write(1, &buffer[ind], length));
 }
 /**
@@ -178,7 +177,7 @@ int flags, int width, int precision, int size)
 		{
 			return (write(1, &buffer[ind], length) + write(1, &buffer[0], i));
 		}
-		else 
+		else
 		{
 			return (write(1, &buffer[0], i) + write(1, &buffer[ind], length));
 		}
